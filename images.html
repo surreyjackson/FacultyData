@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <table></table>
+     <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+    <script src="faculty.js"></script>
+    <script>
+        var displayName = function(facultyMem)
+        {
+            var name = facultyMem.firstName + " " + facultyMem.lastName;
+            d3.select("body").append("p").html("<img src=" + facultyMem.photo +">");
+        }
+        for(var x = 0; x < employees.length; x++)
+            {
+                displayName(employees[x]);
+            }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        table{
+            width: 400px;
+            border: 1px solid black;
+        }
+        tr{
+            height:20px;
+            text-align: center;
+        }
+        td{
+            border: 2px solid black;
+        }
+    </style>
+    <body>
+        <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+        <script src="faculty.js"></script>
+        <table>
+            <td><h2>Number</h2></td><td><h2>Name</h2></td><td><h2>Picture</h2></td>
+        </table>
+        <script>
+            var displayName = function(facultyMem)
+            {
+                var name = facultyMem.firstName + " " + facultyMem.lastName;
+                d3.select("table").append("tr").html("<td><h3>"+ (x+1)+ ". </h3></td><td>" + name + "</td><td> <img src=" + facultyMem.photo +"></td>");
+            }
+            for(var x = 0; x < employees.length; x++)
+            {
+                displayName(employees[x]);
+            }
+    </script>
+    </body>
+</html>
